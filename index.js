@@ -28,7 +28,7 @@ const vcard = 'BEGIN:VCARD\n' // ANAK ANJING MAU NGAPAIN?
             + 'ORG:Creator XPTN;\n' // KASIH CREDITS GUA SU!!!
             + 'TEL;type=CELL;type=VOICE;waid=6289655478810:+62 896-5547-8810\n' // JANGAN KEK BABI SU
             + 'END:VCARD'
-prefix = '$'
+prefix = '!'
 blocked = []
 
 function kyun(seconds){
@@ -138,9 +138,9 @@ async function starts() {
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["6289655478810@s.whatsapp.net"] // replace this with your number
-			const adminbotnumber = ["6282387711916@s.whatsapp.net"]
-			const frendsowner = ["6282198571732@s.whatsapp.net"]
+			const ownerNumber = ["6281292709196@s.whatsapp.net"] // replace this with your number
+			const adminbotnumber = ["6281292709196@s.whatsapp.net"]
+			const frendsowner = ["6281292709196@s.whatsapp.net"]
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -187,7 +187,7 @@ async function starts() {
 				case 'info':
 					me = client.user
 					uptime = process.uptime()
-					teks = `*Nama bot* : ${me.name}\n*Anuther* : *XPTN*\n*FRENDS* : ALFA GANS\n*Nomor Bot* : @${me.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Total Block Contact* : ${blocked.length}\n*The bot is active on* : ${kyun(uptime)}`
+					teks = `*OKA CHINAMI* : ${me.name}\n*Anuther* : * Bot DRIZ:*081292709196* : @${me.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Total Block Contact* : ${blocked.length}\n*The bot is active on* : ${kyun(uptime)}`
 					buffer = await getBuffer(me.imgUrl)
 					client.sendMessage(from, buffer, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
 					break
